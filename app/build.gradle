@@ -1,0 +1,74 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.example.moxyexample"
+        minSdkVersion 16
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    kapt {
+        correctErrorTypes = true
+    }
+}
+
+androidExtensions{
+    experimental = true
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation "androidx.fragment:fragment-ktx:$fragment_version"
+    testImplementation 'junit:junit:4.13.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    //Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    //Hannesdorfmann
+    implementation 'com.hannesdorfmann:adapterdelegates4-kotlin-dsl-layoutcontainer:4.2.0'
+
+    //Moxy
+    implementation 'com.arello-mobile:moxy:1.5.6'
+    kapt 'com.arello-mobile:moxy-compiler:1.5.6'
+/*    implementation 'com.arello-mobile:moxy-android:1.5.5'       //  MvpActivity / MvpFragment
+    implementation 'com.arello-mobile:moxy-app-compat:1.5.5'    //  MvpAppCompatActivity / MvpAppCompatFragment
+    implementation 'com.android.support:appcompat-v7:28.0.0'    //  MvpAppCompatActivity / MvpAppCompatFragment
+    implementation 'tech.schoolhelper:moxy-x-material:1.7.0'    //  Androidx  MvpAppCompatActivity / MvpAppCompatFragment
+    implementation 'tech.schoolhelper:moxy-x-material:1.7.0'    //  Androidx  MvpBottomSheetDialogFragment*/
+
+    //Koin
+    implementation "org.koin:koin-android:$versions_koin"
+    implementation "org.koin:koin-androidx-scope:$versions_koin"
+    testImplementation "org.koin:koin-test:$versions_koin"
+}

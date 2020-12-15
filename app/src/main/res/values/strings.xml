@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MoxyExample</string>
+    <string name="frag1">Пример 1</string>
+    <string name="frag1_moxy">Пример 1 - moxy</string>
+    <string name="frag2">Пример 2</string>
+    <string name="frag2_moxy">Пример 2 - moxy</string>
+    <string name="button_load_image">Перекрасить !</string>
+    <string name="button_calc">Сложить</string>
+    <string name="term_1">Слагаемое 1</string>
+    <string name="term_2">Слагаемое 2</string>
+    <string name="sum">0</string>
+    <string name="load_wild_animals">Загрузить диких животных</string>
+    <string name="load_home_animals">Загрузить домашних животных</string>
+    <string name="animals_list">Список зверюшек</string>
+    <string name="animal">Животное</string>
+
+</resources>

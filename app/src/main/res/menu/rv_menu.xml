@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/load_wild_animals"
+        android:title="@string/load_wild_animals"
+        android:icon="@drawable/ic_load_wild_anim_image"
+        app:showAsAction = "ifRoom"
+    />
+    <item
+        android:id="@+id/load_home_animals"
+        android:title="@string/load_home_animals"
+        android:icon="@drawable/ic_load_home_anim_image"
+        app:showAsAction = "ifRoom"
+        />
+</menu>

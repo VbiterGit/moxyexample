@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startFragment">
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.moxyexample.ui.start.StartFragment"
+        android:label="StartFragment" >
+        <action
+            android:id="@+id/action_startFragment_to_moxyImageFragment"
+            app:destination="@id/moxyImageFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_noMoxyImageFragment"
+            app:destination="@id/noMoxyImageFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_moxyRvFragment"
+            app:destination="@id/moxyRvFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_noMoxyRvFragment"
+            app:destination="@id/noMoxyRvFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/moxyImageFragment"
+        android:name="com.example.moxyexample.ui.moxy.image.MoxyImageFragment"
+        android:label="MoxyImageFragment" />
+    <fragment
+        android:id="@+id/noMoxyImageFragment"
+        android:name="com.example.moxyexample.ui.nomoxy.image.NoMoxyImageFragment"
+        android:label="NoMoxyImageFragment" />
+    <fragment
+        android:id="@+id/moxyRvFragment"
+        android:name="com.example.moxyexample.ui.moxy.recview.MoxyRvOneFragment"
+        android:label="MoxyRvFragment" />
+    <fragment
+        android:id="@+id/noMoxyRvFragment"
+        android:name="com.example.moxyexample.ui.nomoxy.recview.NoMoxyRvFragment"
+        android:label="NoMoxyRvFragment" />
+</navigation>
