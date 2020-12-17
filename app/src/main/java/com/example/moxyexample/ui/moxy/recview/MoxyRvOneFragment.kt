@@ -17,6 +17,12 @@ import kotlinx.android.synthetic.main.layout_nomoxy_rv.*
 import org.koin.android.ext.android.get
 import org.koin.core.parameter.parametersOf
 
+/**
+ *
+ * Несколько View можно приаттачить к одному Presenter, к примеру добавить еще один Fragment типа MoxyRvOneView в проект
+ * после чего viewState из MoxyRvOnePresenter будет отправлять команды в оба фрагмента типа MoxyRvOneView.
+ */
+
 class MoxyRvOneFragment: MvpAppCompatFragment(R.layout.layout_moxy_rv), MoxyRvOneView, MoxyRvTwoView {
     /**
      * Инъекция экземпляра MoxyRvPresenter в View
@@ -31,7 +37,7 @@ class MoxyRvOneFragment: MvpAppCompatFragment(R.layout.layout_moxy_rv), MoxyRvOn
     fun provideOnePresenter(): MoxyRvOnePresenter = get { parametersOf( "Инициализация") }
 
     /**
-     * К View можно приатачить любое кол-во Presenter. Можно использовать для разделения логики, если Presenter становится слишком объемный.
+     * И к View можно приатачить любое кол-во Presenter. Можно использовать для разделения логики, если Presenter становится слишком объемный.
      */
     @InjectPresenter
     lateinit var twoPresenter: MoxyRvTwoPresenter
