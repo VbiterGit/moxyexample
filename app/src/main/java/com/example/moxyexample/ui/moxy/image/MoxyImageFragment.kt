@@ -17,7 +17,7 @@ class MoxyImageFragment: MvpAppCompatFragment(R.layout.layout_moxy_image), MoxyI
     lateinit var presenter: MoxyImagePresenter
 
     /**
-     * Передаем параметр в MoxyImagePresenter при его инициализации
+     * Передаем параметр в MoxyImagePresenter при его инициализации, используется в связке с DI (Koin, Dagger и т.п.)
      */
     @ProvidePresenter
     fun providePresenter(): MoxyImagePresenter = get {

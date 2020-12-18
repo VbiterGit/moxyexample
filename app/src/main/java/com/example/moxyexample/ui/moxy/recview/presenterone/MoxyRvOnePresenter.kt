@@ -17,7 +17,7 @@ class MoxyRvOnePresenter(
 
     /**
      * Здесь объекты Model инжектятся напрямую в Presenter.
-     * Можно также добавить ассинхронные вызовы через Interactor, Repository подгружающие данные из сети/БД, которые через viewState этого Presenter будут отображаются во View
+     * Можно также добавить ассинхронные вызовы через Interactor, Repository подгружающие данные из сети/БД, результаты которых через viewState этого Presenter будут менять состояние View
      */
     private val homeAnimals: List<Animal> = get(named(NAME_HOME_ANIMALS))
     private val wildAnimals: List<Animal> = get(named(NAME_WILD_ANIMALS))

@@ -19,7 +19,7 @@ import org.koin.core.parameter.parametersOf
 
 /**
  *
- * Несколько View можно приаттачить к одному Presenter, к примеру добавить еще один Fragment типа MoxyRvOneView в проект
+ * Несколько View можно приаттачить к одному Presenter, к примеру добавить еще одну View типа MoxyRvOneView
  * после чего viewState из MoxyRvOnePresenter будет отправлять команды в оба фрагмента типа MoxyRvOneView.
  */
 
@@ -31,13 +31,14 @@ class MoxyRvOneFragment: MvpAppCompatFragment(R.layout.layout_moxy_rv), MoxyRvOn
     lateinit var onePresenter: MoxyRvOnePresenter
 
     /**
-     * Передаем параметр в MoxyRvPresenter при его инициализации
+     * Передаем параметр в MoxyRvPresenter при его инициализации, используется в связке с DI (Koin, Dagger и т.п.)
      */
     @ProvidePresenter
     fun provideOnePresenter(): MoxyRvOnePresenter = get { parametersOf( "Инициализация") }
 
     /**
      * И к View можно приатачить любое кол-во Presenter. Можно использовать для разделения логики, если Presenter становится слишком объемный.
+     * Также это упрощает дальнейшее разделение экарана на 2 и более
      */
     @InjectPresenter
     lateinit var twoPresenter: MoxyRvTwoPresenter
