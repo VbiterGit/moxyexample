@@ -1,8 +1,8 @@
 package com.example.moxyexample.ui.moxy.image
 
 import android.os.Bundle
-import com.arellomobile.mvp.presenter.InjectPresenter
-import com.arellomobile.mvp.presenter.ProvidePresenter
+import moxy.presenter.InjectPresenter
+import moxy.presenter.ProvidePresenter
 import com.example.moxyexample.R
 import com.example.moxyexample.toolkit.MvpAppCompatFragment
 import kotlinx.android.synthetic.main.layout_moxy_image.*

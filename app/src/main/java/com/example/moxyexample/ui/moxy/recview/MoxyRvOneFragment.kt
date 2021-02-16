@@ -2,8 +2,8 @@ package com.example.moxyexample.ui.moxy.recview
 
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.arellomobile.mvp.presenter.InjectPresenter
-import com.arellomobile.mvp.presenter.ProvidePresenter
+import moxy.presenter.InjectPresenter
+import moxy.presenter.ProvidePresenter
 import com.example.moxyexample.R
 import com.example.moxyexample.ui.adapter.animalsAdapterDelegate
 import com.example.moxyexample.model.Animal

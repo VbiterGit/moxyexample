@@ -1,7 +1,7 @@
 package com.example.moxyexample.ui.moxy.recview.presenterone
 
-import com.arellomobile.mvp.InjectViewState
-import com.arellomobile.mvp.MvpPresenter
+import moxy.InjectViewState
+import moxy.MvpPresenter
 import com.example.moxyexample.di.NAME_HOME_ANIMALS
 import com.example.moxyexample.di.NAME_WILD_ANIMALS
 import com.example.moxyexample.model.Animal

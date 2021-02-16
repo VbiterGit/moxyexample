@@ -17,6 +17,15 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [
+                    "enableEmptyStrategyHelper" : "true",
+                    "moxyEnableIsolatingProcessing" : "true"
+                ]
+            }
+        }
     }
 
     buildTypes {
@@ -44,7 +53,7 @@ androidExtensions{
 dependencies {
     implementation 'androidx.core:core-ktx:1.3.2'
     implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'com.google.android.material:material:1.3.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation "androidx.fragment:fragment-ktx:$fragment_version"
     testImplementation 'junit:junit:4.13.1'
@@ -59,13 +68,9 @@ dependencies {
     implementation 'com.hannesdorfmann:adapterdelegates4-kotlin-dsl-layoutcontainer:4.2.0'
 
     //Moxy
-    implementation 'com.arello-mobile:moxy:1.5.6'
-    kapt 'com.arello-mobile:moxy-compiler:1.5.6'
-/*    implementation 'com.arello-mobile:moxy-android:1.5.5'       //  MvpActivity / MvpFragment
-    implementation 'com.arello-mobile:moxy-app-compat:1.5.5'    //  MvpAppCompatActivity / MvpAppCompatFragment
-    implementation 'com.android.support:appcompat-v7:28.0.0'    //  MvpAppCompatActivity / MvpAppCompatFragment
-    implementation 'tech.schoolhelper:moxy-x-material:1.7.0'    //  Androidx  MvpAppCompatActivity / MvpAppCompatFragment
-    implementation 'tech.schoolhelper:moxy-x-material:1.7.0'    //  Androidx  MvpBottomSheetDialogFragment*/
+    implementation "com.github.moxy-community:moxy-androidx:$versions_moxy"
+    implementation "com.github.moxy-community:moxy-ktx:$versions_moxy"
+    kapt "com.github.moxy-community:moxy-compiler:$versions_moxy"
 
     //Koin
     implementation "org.koin:koin-android:$versions_koin"

@@ -1,7 +1,7 @@
 package com.example.moxyexample.ui.moxy.recview.presentertwo
 
-import com.arellomobile.mvp.InjectViewState
-import com.arellomobile.mvp.MvpPresenter
+import moxy.InjectViewState
+import moxy.MvpPresenter
 
 @InjectViewState
 class MoxyRvTwoPresenter : MvpPresenter<MoxyRvTwoView>()
