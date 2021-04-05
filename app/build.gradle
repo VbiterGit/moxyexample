@@ -3,7 +3,6 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-android-extensions'
     id 'kotlin-kapt'
-    id "androidx.navigation.safeargs.kotlin"
 }
 
 android {
@@ -18,6 +17,15 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [
+                    "enableEmptyStrategyHelper" : "true",
+                    "moxyEnableIsolatingProcessing" : "true"
+                ]
+            }
+        }
     }
 
     buildTypes {
@@ -60,12 +68,12 @@ dependencies {
     implementation 'com.hannesdorfmann:adapterdelegates4-kotlin-dsl-layoutcontainer:4.2.0'
 
     //Moxy
-    implementation 'com.arello-mobile:moxy:1.5.6'
-    kapt 'com.arello-mobile:moxy-compiler:1.5.6'
+    implementation "com.github.moxy-community:moxy-androidx:$versions_moxy"
+    implementation "com.github.moxy-community:moxy-ktx:$versions_moxy"
+    kapt "com.github.moxy-community:moxy-compiler:$versions_moxy"
 
     //Koin
     implementation "org.koin:koin-android:$versions_koin"
     implementation "org.koin:koin-androidx-scope:$versions_koin"
     testImplementation "org.koin:koin-test:$versions_koin"
 }
-

@@ -3,7 +3,7 @@ package com.example.budgetplanner.toolkit
 import android.os.Bundle
 import androidx.annotation.LayoutRes
 import androidx.fragment.app.Fragment
-import com.arellomobile.mvp.MvpDelegate
+import moxy.MvpDelegate
 
 @Suppress("unused")
 open class MvpAppCompatFragment(@LayoutRes contentLayoutId: Int = 0) : Fragment(contentLayoutId) {

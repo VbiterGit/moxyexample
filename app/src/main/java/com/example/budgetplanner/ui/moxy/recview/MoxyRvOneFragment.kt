@@ -2,8 +2,8 @@ package com.example.budgetplanner.ui.moxy.recview
 
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.arellomobile.mvp.presenter.InjectPresenter
-import com.arellomobile.mvp.presenter.ProvidePresenter
+import moxy.presenter.InjectPresenter
+import moxy.presenter.ProvidePresenter
 import com.example.budgetplanner.R
 import com.example.budgetplanner.ui.adapter.animalsAdapterDelegate
 import com.example.budgetplanner.model.Animal

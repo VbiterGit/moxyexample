@@ -1,13 +1,12 @@
 package com.example.budgetplanner.ui.moxy.recview.presenterone
 
-import com.arellomobile.mvp.MvpView
-import com.arellomobile.mvp.viewstate.strategy.AddToEndSingleStrategy
-import com.arellomobile.mvp.viewstate.strategy.StateStrategyType
+import moxy.MvpView
 import com.example.budgetplanner.model.Animal
+import moxy.viewstate.strategy.alias.AddToEndSingle
 
-@StateStrategyType(AddToEndSingleStrategy::class)
 interface MoxyRvOneView: MvpView {
+    @AddToEndSingle
     fun onLoadWildAnimals(wildAnimals: List<Animal>)
-
+    @AddToEndSingle
     fun onLoadHomeAnimals(homeAnimals: List<Animal>)
 }

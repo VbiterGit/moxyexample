@@ -1,7 +1,7 @@
 package com.example.budgetplanner.ui.moxy.image
 
-import com.arellomobile.mvp.InjectViewState
-import com.arellomobile.mvp.MvpPresenter
+import moxy.InjectViewState
+import moxy.MvpPresenter
 
 /**
  * Привязка Presenter к ViewState

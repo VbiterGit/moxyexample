@@ -1,12 +1,13 @@
 package com.example.budgetplanner.ui.moxy.image
 
-import com.arellomobile.mvp.MvpView
-import com.arellomobile.mvp.viewstate.strategy.AddToEndSingleStrategy
-import com.arellomobile.mvp.viewstate.strategy.StateStrategyType
+import moxy.MvpView
+import moxy.viewstate.strategy.alias.AddToEndSingle
 
-@StateStrategyType(AddToEndSingleStrategy::class)
 interface MoxyImageView: MvpView {
+    @AddToEndSingle
     fun onInitImage()
+    @AddToEndSingle
     fun onRecolorImage()
+    @AddToEndSingle
     fun onCalcSum()
 }

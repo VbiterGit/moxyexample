@@ -1,8 +1,8 @@
 package com.example.budgetplanner.ui.moxy.image
 
 import android.os.Bundle
-import com.arellomobile.mvp.presenter.InjectPresenter
-import com.arellomobile.mvp.presenter.ProvidePresenter
+import moxy.presenter.InjectPresenter
+import moxy.presenter.ProvidePresenter
 import com.example.budgetplanner.R
 import com.example.budgetplanner.toolkit.MvpAppCompatFragment
 import kotlinx.android.synthetic.main.layout_moxy_image.*
