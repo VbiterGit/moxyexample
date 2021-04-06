@@ -1,6 +1,8 @@
 package com.example.budgetplanner.ui.moxy.image
 
 import android.os.Bundle
+import android.view.View
+import androidx.fragment.app.activityViewModels
 import moxy.presenter.InjectPresenter
 import moxy.presenter.ProvidePresenter
 import com.example.budgetplanner.R
@@ -24,8 +26,8 @@ class MoxyImageFragment: MvpAppCompatFragment(R.layout.layout_moxy_image), MoxyI
         parametersOf( 1)
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         btn_recolor.setOnClickListener {
             presenter.recolorImage()

@@ -1,6 +1,7 @@
 package com.example.budgetplanner.ui.nomoxy.recview
 
 import android.os.Bundle
+import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.budgetplanner.R
@@ -15,8 +16,8 @@ class NoMoxyRvFragment: Fragment(R.layout.layout_nomoxy_rv) {
     private var homeAnimals: MutableList<Animal> = mutableListOf()
     private var wildAnimals: MutableList<Animal> = mutableListOf()
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         toolbar.apply {
             title = getString(R.string.animals_list)

@@ -1,6 +1,7 @@
 package com.example.budgetplanner.ui.moxy.recview
 
 import android.os.Bundle
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import moxy.presenter.InjectPresenter
 import moxy.presenter.ProvidePresenter
@@ -49,8 +50,8 @@ class MoxyRvOneFragment: MvpAppCompatFragment(R.layout.layout_moxy_rv), MoxyRvOn
     private lateinit var animalAdapter: ListDelegationAdapter<List<Animal>>
     private lateinit var linearLayoutManager: LinearLayoutManager
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         toolbar.apply {
             title = getString(R.string.animals_list)

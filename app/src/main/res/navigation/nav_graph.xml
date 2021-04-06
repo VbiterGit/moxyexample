@@ -10,13 +10,22 @@
         android:label="StartFragment" >
         <action
             android:id="@+id/action_startFragment_to_moxyImageFragment"
-            app:destination="@id/navigation_moxy_image" />
+            app:destination="@id/navigation_moxy_image"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
         <action
             android:id="@+id/action_startFragment_to_noMoxyImageFragment"
             app:destination="@id/noMoxyImageFragment" />
         <action
             android:id="@+id/action_startFragment_to_moxyRvFragment"
-            app:destination="@id/moxyRvFragment" />
+            app:destination="@id/moxyRvFragment" >
+            <argument
+                android:name="test_arg_1"
+                app:argType="string"
+                android:defaultValue="1" />
+        </action>
         <action
             android:id="@+id/action_startFragment_to_noMoxyRvFragment"
             app:destination="@id/noMoxyRvFragment" />
@@ -24,11 +33,23 @@
     <fragment
         android:id="@+id/noMoxyImageFragment"
         android:name="com.example.budgetplanner.ui.nomoxy.image.NoMoxyImageFragment"
-        android:label="NoMoxyImageFragment" />
+        android:label="NoMoxyImageFragment">
+        <deepLink
+            android:id="@+id/deepLink"
+            app:action="ACTION_SEND"
+            app:mimeType="text/rtf"
+            app:uri="https://www.com.example.budgetplanner" />
+    </fragment>
     <fragment
         android:id="@+id/moxyRvFragment"
         android:name="com.example.budgetplanner.ui.moxy.recview.MoxyRvOneFragment"
-        android:label="MoxyRvFragment" />
+        android:label="MoxyRvFragment" >
+        <argument
+            android:name="test_arg_1"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null"/>
+    </fragment>
     <fragment
         android:id="@+id/noMoxyRvFragment"
         android:name="com.example.budgetplanner.ui.nomoxy.recview.NoMoxyRvFragment"
