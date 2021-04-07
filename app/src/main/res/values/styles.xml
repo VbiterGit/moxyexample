@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.MaterialComponents.Toolbar.BudgetPlanner" parent="Widget.MaterialComponents.Toolbar">
+        <item name="android:background">?attr/colorPrimary</item>
+        <item name="android:minHeight">?actionBarSize</item>
+        <item name="contentInsetStartWithNavigation">72dp</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+    </style>
+
+    <style name="Widget.MaterialComponents.BottomAppBar.BudgetPlanner" parent="Widget.MaterialComponents.BottomAppBar">
+<!--        <item name="backgroundTint">?attr/colorPrimary</item>-->
+        <item name="android:background">?attr/colorPrimary</item>
+        <item name="android:minHeight">@dimen/bottom_bar_size</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+    </style>
+</resources>

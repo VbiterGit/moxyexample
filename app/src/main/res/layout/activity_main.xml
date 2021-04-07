@@ -11,20 +11,12 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/tall_toolbar_height">
 
-        <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:id="@+id/collapsing_toolbar_layout"
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:contentScrim="?attr/colorPrimary"
-            app:expandedTitleGravity="top"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="pin"/>
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="pin"
+            style="@style/Widget.MaterialComponents.Toolbar.BudgetPlanner"/>
     </com.google.android.material.appbar.AppBarLayout>
 
     <fragment
@@ -35,5 +27,12 @@
         app:navGraph="@navigation/nav_graph"
         app:defaultNavHost="true"
         android:layout_weight="10"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_height="@dimen/bottom_bar_size"
+        android:layout_width="match_parent"
+        app:menu="@menu/buttom_menu"
+        style="@style/Widget.MaterialComponents.BottomAppBar.BudgetPlanner"/>
 
 </LinearLayout>

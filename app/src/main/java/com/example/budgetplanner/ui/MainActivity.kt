@@ -6,6 +6,7 @@ import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
+import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.budgetplanner.R
 import kotlinx.android.synthetic.main.activity_main.*
@@ -21,8 +22,19 @@ class MainActivity : AppCompatActivity() {
         navController = findNavController(R.id.nav_host_fragment)
         appBarConfiguration = AppBarConfiguration(navController.graph)
 
-        collapsing_toolbar_layout.setupWithNavController(toolbar, navController, AppBarConfiguration(navController.graph))
+//        toolbar.setupWithNavController(navController, appBarConfiguration)
+        setSupportActionBar(toolbar)
+        supportActionBar?.title = "Start Fragment"
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setHomeButtonEnabled(true)
+
+        setupActionBarWithNavController(navController, appBarConfiguration)
+//        nav_view.setupWithNavController(navController)
     }
+
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        return item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
+//    }
 
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()

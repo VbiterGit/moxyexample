@@ -9,9 +9,15 @@
     <string name="term_1">Слагаемое 1</string>
     <string name="term_2">Слагаемое 2</string>
     <string name="sum">0</string>
-    <string name="load_wild_animals">Загрузить диких животных</string>
-    <string name="load_home_animals">Загрузить домашних животных</string>
     <string name="animals_list">Список зверюшек</string>
     <string name="animal">Животное</string>
+
+    <!--menu-->
+    <string name="load_wild_animals">Загрузить диких животных</string>
+    <string name="load_home_animals">Загрузить домашних животных</string>
+    <string name="add_something">Что-то добавить</string>
+    <string name="app_settings">Настройки приложения</string>
+    <string name="start_page">Начальная страница</string>
+    <string name="next_page">Следующая страница</string>
 
 </resources>
