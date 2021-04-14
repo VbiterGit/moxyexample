@@ -2,6 +2,7 @@ package com.example.budgetplanner.ui.moxy.recview
 
 import android.os.Bundle
 import android.view.View
+import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import moxy.presenter.InjectPresenter
 import moxy.presenter.ProvidePresenter
@@ -25,6 +26,8 @@ import org.koin.core.parameter.parametersOf
  */
 
 class MoxyRvOneFragment: MvpAppCompatFragment(R.layout.layout_moxy_rv), MoxyRvOneView, MoxyRvTwoView {
+    val args: MoxyRvOneFragmentArgs by navArgs()
+
     /**
      * Инъекция экземпляра MoxyRvPresenter в View
      */
@@ -68,6 +71,8 @@ class MoxyRvOneFragment: MvpAppCompatFragment(R.layout.layout_moxy_rv), MoxyRvOn
                 true
             }
         }
+
+        val arg1 = args.arg1
 
         initView()
     }
