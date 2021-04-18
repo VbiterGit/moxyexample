@@ -1,11 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:id="@+id/add_something"
-        android:title="@string/start_page"
-    />
-    <item
-        android:id="@+id/app_settings"
-        android:title="@string/next_page"
-    />
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="nav_view">
+
+        <group android:checkableBehavior="none">
+            <item
+                android:id="@+id/startFragment"
+                android:icon="@drawable/ic_home_nav"
+                android:title="@string/home_nav"/>
+
+            <item
+                android:id="@+id/viewPagerFragment"
+                android:icon="@drawable/ic_vp_nav"
+                android:title="@string/vp_nav"/>
+        </group>
+
+        <item android:title="@string/addition_pages">
+            <menu>
+                <item
+                    android:id="@+id/noMoxyImageFragment"
+                    android:icon="@drawable/ic_image_nav"
+                    android:title="@string/image_nav"/>
+                <item
+                    android:id="@+id/noMoxyRvFragment"
+                    android:icon="@drawable/ic_rv_nav"
+                    android:title="@string/rv_nav"/>
+            </menu>
+        </item>
 </menu>

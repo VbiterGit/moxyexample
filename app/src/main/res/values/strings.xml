@@ -22,4 +22,13 @@
     <string name="next_page">Следующая страница</string>
     <string name="some_text">Просто текст</string>
 
+    <!--Drawer-->
+    <string name="home_nav">Домашний экран</string>
+    <string name="vp_nav">Экран с ViewPager</string>
+    <string name="image_nav">Экран c Image</string>
+    <string name="rv_nav">Экран с RV</string>
+    <string name="android_studio">Android Studio</string>
+    <string name="android_studio_android_com">android.studio@android.com</string>
+    <string name="addition_pages">Доп. экраны</string>
+
 </resources>

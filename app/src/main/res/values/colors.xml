@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="card_view_home">#E0E502</color>
     <color name="card_view_wild">#4AD301</color>
+    <color name="grey">#ADAFA7</color>
 </resources>
