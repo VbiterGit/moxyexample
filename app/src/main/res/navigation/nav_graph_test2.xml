@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/testFragment2"
-        android:name="com.example.budgetplanner.ui.nomoxy.test2.TestFragment2"
+        android:name="com.example.moxyexample.ui.viewmodel.test2.TestFragment2"
         android:label="TestFragment2" />
 
     <action android:id="@+id/action_global_testFragment2" app:destination="@id/testFragment2"/>

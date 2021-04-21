@@ -69,18 +69,21 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
+    //LiveData
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+
     //Hannesdorfmann
     implementation 'com.hannesdorfmann:adapterdelegates4-kotlin-dsl-layoutcontainer:4.2.0'
 
     //Moxy
-    implementation "com.github.moxy-community:moxy-androidx:$versions_moxy"
-    implementation "com.github.moxy-community:moxy-ktx:$versions_moxy"
-    kapt "com.github.moxy-community:moxy-compiler:$versions_moxy"
+    implementation "com.github.moxy-community:moxy-androidx:$moxy_version"
+    implementation "com.github.moxy-community:moxy-ktx:$moxy_version"
+    kapt "com.github.moxy-community:moxy-compiler:$moxy_version"
 
     //Koin
-    implementation "org.koin:koin-android:$versions_koin"
-    implementation "org.koin:koin-androidx-scope:$versions_koin"
-    testImplementation "org.koin:koin-test:$versions_koin"
+    implementation "org.koin:koin-android:$koin_version"
+    implementation "org.koin:koin-androidx-scope:$koin_version"
+    testImplementation "org.koin:koin-test:$koin_version"
 
     //viewpager
     implementation "androidx.viewpager2:viewpager2:1.0.0"

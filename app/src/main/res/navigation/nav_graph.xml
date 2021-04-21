@@ -6,7 +6,7 @@
     app:startDestination="@id/startFragment">
     <fragment
         android:id="@+id/startFragment"
-        android:name="com.example.budgetplanner.ui.start.StartFragment"
+        android:name="com.example.moxyexample.ui.start.StartFragment"
         android:label="StartFragment"
         tools:layout="@layout/layout_start">
         <action
@@ -32,7 +32,7 @@
     </fragment>
     <fragment
         android:id="@+id/noMoxyImageFragment"
-        android:name="com.example.budgetplanner.ui.nomoxy.image.NoMoxyImageFragment"
+        android:name="com.example.moxyexample.ui.viewmodel.image.NoMoxyImageFragment"
         android:label="NoMoxyImageFragment"
         tools:layout="@layout/layout_nomoxy_image">
         <deepLink
@@ -43,7 +43,7 @@
     </fragment>
     <fragment
         android:id="@+id/moxyRvFragment"
-        android:name="com.example.budgetplanner.ui.moxy.recview.MoxyRvOneFragment"
+        android:name="com.example.moxyexample.ui.moxy.recview.MoxyRvOneFragment"
         android:label="MoxyRvFragment"
         tools:layout="@layout/layout_moxy_rv">
         <argument
@@ -53,14 +53,14 @@
     </fragment>
     <fragment
         android:id="@+id/noMoxyRvFragment"
-        android:name="com.example.budgetplanner.ui.nomoxy.recview.NoMoxyRvFragment"
+        android:name="com.example.moxyexample.ui.viewmodel.recview.RvFragment"
         android:label="NoMoxyRvFragment"
         tools:layout="@layout/layout_nomoxy_rv"/>
     <navigation android:id="@+id/navigation_moxy_image"
         app:startDestination="@id/moxyImageFragment">
         <fragment
             android:id="@+id/moxyImageFragment"
-            android:name="com.example.budgetplanner.ui.moxy.image.MoxyImageFragment"
+            android:name="com.example.moxyexample.ui.moxy.image.MoxyImageFragment"
             android:label="MoxyImageFragment"
             tools:layout="@layout/layout_moxy_image">
             <action
@@ -69,7 +69,7 @@
         </fragment>
         <fragment
             android:id="@+id/testDialogFragment1"
-            android:name="com.example.budgetplanner.ui.nomoxy.test.TestDialogFragment1"
+            android:name="com.example.moxyexample.ui.viewmodel.test.TestDialogFragment1"
             android:label="TestDialogFragment1"
             tools:layout="@layout/test1">
             <action
@@ -81,7 +81,7 @@
     <include app:graph="@navigation/nav_graph_test2"/>
     <fragment
         android:id="@+id/viewPagerFragment"
-        android:name="com.example.budgetplanner.ui.nomoxy.viewpager.ViewPagerFragment"
+        android:name="com.example.moxyexample.ui.viewmodel.viewpager.ViewPagerFragment"
         android:label="ViewPagerFragment"
         tools:layout="@layout/layout_viewpager"/>
 </navigation>
