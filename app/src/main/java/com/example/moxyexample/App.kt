@@ -1,6 +1,7 @@
 package com.example.moxyexample
 
 import android.app.Application
+import com.example.moxyexample.di.customLiveDataModule
 import com.example.moxyexample.di.moxyImageModule
 import com.example.moxyexample.di.moxyRvModule
 import org.koin.android.ext.koin.androidContext
@@ -19,7 +20,8 @@ class App: Application() {
             modules(
                 listOf(
                     moxyImageModule,
-                    moxyRvModule
+                    moxyRvModule,
+                    customLiveDataModule
                 )
             )
         }

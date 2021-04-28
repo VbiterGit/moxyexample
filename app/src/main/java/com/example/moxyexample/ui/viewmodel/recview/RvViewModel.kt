@@ -1,17 +1,31 @@
 package com.example.moxyexample.ui.viewmodel.recview
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import com.example.moxyexample.model.Animal
+import com.example.moxyexample.toolkit.livedata.CustomLiveData
+import org.koin.core.KoinComponent
+import org.koin.core.inject
 
-class RvViewModel: ViewModel() {
+class RvViewModel: ViewModel(), KoinComponent {
     private var homeAnimals: MutableList<Animal> = mutableListOf()
     private var wildAnimals: MutableList<Animal> = mutableListOf()
     val currentAnimals: MutableLiveData<List<Animal>> by lazy { initialHomeAnimals() }
+    val customLD: CustomLiveData by inject()
 
     private fun initialHomeAnimals(): MutableLiveData<List<Animal>> {
         setHomeAnimals()
-        return MutableLiveData(homeAnimals)
+
+        val testAnimals: LiveData<List<Animal>> = Transformations.switchMap(currentAnimals){
+            doSomeTransformations(it)
+        }
+        return MutableLiveData(testAnimals.value)
+    }
+
+    private fun doSomeTransformations(currentAnimals: List<Animal>?): LiveData<List<Animal>> {
+        return MutableLiveData(currentAnimals)
     }
 
     fun loadHomeAnimals(){

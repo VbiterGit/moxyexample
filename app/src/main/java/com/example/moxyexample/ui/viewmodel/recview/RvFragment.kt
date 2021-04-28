@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Transformations
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.moxyexample.R
 import com.example.moxyexample.model.Animal
@@ -51,6 +52,11 @@ class RvFragment: Fragment(R.layout.layout_nomoxy_rv) {
     }
 
     private fun loadCurrentAnimals() {
+        animalsModel.customLD.observe(
+            viewLifecycleOwner,
+            {val str = it}
+        )
+
         animalsModel.currentAnimals.observe(
             viewLifecycleOwner,
             { animalAdapter.items = it }
