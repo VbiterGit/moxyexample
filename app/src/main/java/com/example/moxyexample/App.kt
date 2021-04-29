@@ -4,6 +4,7 @@ import android.app.Application
 import com.example.moxyexample.di.customLiveDataModule
 import com.example.moxyexample.di.moxyImageModule
 import com.example.moxyexample.di.moxyRvModule
+import com.example.moxyexample.di.roomDatabaseModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -21,7 +22,8 @@ class App: Application() {
                 listOf(
                     moxyImageModule,
                     moxyRvModule,
-                    customLiveDataModule
+                    customLiveDataModule,
+                    roomDatabaseModule
                 )
             )
         }

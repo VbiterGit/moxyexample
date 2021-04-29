@@ -2,12 +2,12 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph_test2"
-    app:startDestination="@id/testFragment2">
+    app:startDestination="@id/dbFragment">
 
     <fragment
-        android:id="@+id/testFragment2"
-        android:name="com.example.moxyexample.ui.viewmodel.test2.TestFragment2"
-        android:label="TestFragment2" />
+        android:id="@+id/dbFragment"
+        android:name="com.example.moxyexample.ui.viewmodel.db.DbFragment"
+        android:label="dbFragment" />
 
-    <action android:id="@+id/action_global_testFragment2" app:destination="@id/testFragment2"/>
+    <action android:id="@+id/action_global_dbFragment" app:destination="@id/dbFragment"/>
 </navigation>

@@ -30,5 +30,7 @@
     <string name="android_studio">Android Studio</string>
     <string name="android_studio_android_com">android.studio@android.com</string>
     <string name="addition_pages">Доп. экраны</string>
+	<string name="button_load_db">Загрузить данные в БД</string>
+    <string name="button_clean_db">Очистить данные в БД</string>
 
 </resources>

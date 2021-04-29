@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Transformations
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.moxyexample.R
 import com.example.moxyexample.model.Animal

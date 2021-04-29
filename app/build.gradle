@@ -14,8 +14,8 @@ android {
         applicationId "com.example.moxyexample"
         minSdkVersion 16
         targetSdkVersion 30
-        versionCode 10001
-        versionName "1.0.1"
+        versionCode 10002
+        versionName "1.0.2"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
@@ -87,4 +87,10 @@ dependencies {
 
     //viewpager
     implementation "androidx.viewpager2:viewpager2:1.0.0"
+
+    //Room
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+    testImplementation "androidx.room:room-testing:$room_version"
 }

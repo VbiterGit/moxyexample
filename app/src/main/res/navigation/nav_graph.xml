@@ -29,6 +29,9 @@
         <action
             android:id="@+id/action_startFragment_to_viewPagerFragment"
             app:destination="@id/viewPagerFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_nav_graph_test2"
+            app:destination="@id/nav_graph_test2" />
     </fragment>
     <fragment
         android:id="@+id/noMoxyImageFragment"
@@ -62,21 +65,7 @@
             android:id="@+id/moxyImageFragment"
             android:name="com.example.moxyexample.ui.moxy.image.MoxyImageFragment"
             android:label="MoxyImageFragment"
-            tools:layout="@layout/layout_moxy_image">
-            <action
-                android:id="@+id/action_moxyImageFragment_to_testDialogFragment1"
-                app:destination="@id/testDialogFragment1" />
-        </fragment>
-        <fragment
-            android:id="@+id/testDialogFragment1"
-            android:name="com.example.moxyexample.ui.viewmodel.test.TestDialogFragment1"
-            android:label="TestDialogFragment1"
-            tools:layout="@layout/test1">
-            <action
-                android:id="@+id/action_testDialogFragment1_to_placeholder"
-                app:destination="@id/placeholder" />
-        </fragment>
-        <fragment android:id="@+id/placeholder" />
+            tools:layout="@layout/layout_moxy_image"/>
     </navigation>
     <include app:graph="@navigation/nav_graph_test2"/>
     <fragment
