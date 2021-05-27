@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph_test2"
     app:startDestination="@id/dbFragment">
 
     <fragment
         android:id="@+id/dbFragment"
         android:name="com.example.moxyexample.ui.viewmodel.db.DbFragment"
-        android:label="dbFragment" />
+        android:label="dbFragment"
+        tools:layout="@layout/layout_db"/>
 
     <action android:id="@+id/action_global_dbFragment" app:destination="@id/dbFragment"/>
 </navigation>

@@ -6,8 +6,8 @@ import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import com.example.moxyexample.model.Animal
 import com.example.moxyexample.toolkit.livedata.CustomLiveData
-import org.koin.core.KoinComponent
-import org.koin.core.inject
+import org.koin.core.component.KoinComponent
+import org.koin.core.component.inject
 
 class RvViewModel: ViewModel(), KoinComponent {
     private var homeAnimals: MutableList<Animal> = mutableListOf()

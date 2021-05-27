@@ -5,8 +5,8 @@ import moxy.MvpPresenter
 import com.example.moxyexample.di.NAME_HOME_ANIMALS
 import com.example.moxyexample.di.NAME_WILD_ANIMALS
 import com.example.moxyexample.model.Animal
-import org.koin.core.KoinComponent
-import org.koin.core.get
+import org.koin.core.component.KoinComponent
+import org.koin.core.component.get
 import org.koin.core.qualifier.named
 
 @InjectViewState
